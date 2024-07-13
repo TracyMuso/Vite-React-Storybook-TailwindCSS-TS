@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
@@ -61,7 +61,6 @@
     "vitest": "^2.0.2"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "eslint --max-warnings 0 .",
-    "*./src": "prettier --write"
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

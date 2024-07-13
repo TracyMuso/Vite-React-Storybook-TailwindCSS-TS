@@ -1,7 +1,12 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', 'prettier', 'plugin:storybook/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'love',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -16,5 +21,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/consistent-type-definitions': ['off'],
   },
 };
