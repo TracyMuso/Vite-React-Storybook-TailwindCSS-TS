@@ -16,10 +16,10 @@
     "test-all": "yarn check-format && yarn check-lint && yarn check-prettier && yarn check-types && yarn build",
     "coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "lint-staged": "^15.2.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -51,6 +51,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.11",
     "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.7",
     "postcss": "^8.4.39",
     "prettier": "3.3.2",
     "storybook": "^8.2.2",
@@ -60,6 +61,7 @@
     "vitest": "^2.0.2"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{ts,tsx}": "eslint --max-warnings 0 .",
+    "*./src": "prettier --write"
   }
 }
