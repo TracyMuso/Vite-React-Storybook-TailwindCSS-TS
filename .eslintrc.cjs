@@ -1,7 +1,12 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  extends: ['plugin:react/recommended', 'airbnb-typescript', 'prettier'],
+  extends: [
+    'plugin:react/recommended',
+    'react-hooks',
+    'airbnb-typescript',
+    'prettier',
+  ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
